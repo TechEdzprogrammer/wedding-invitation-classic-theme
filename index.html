@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6f0e7">
+  <meta name="description" content="Classic wedding invitation theme.">
+  <title>Classic Wedding Invitation Theme</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="frame-border"></div>
+  <header class="hero shell">
+    <p class="eyebrow" data-field="heroTag"></p>
+    <p class="script-line">The Wedding of</p>
+    <h1 class="hero-title" data-field="coupleDisplay"></h1>
+    <p class="hero-meta"><span data-field="dateLabel"></span> · <span data-field="dateTime"></span> · <span data-field="dateDay"></span></p>
+    <p class="hero-copy" data-field="introCopy"></p>
+    <div class="hero-actions">
+      <a class="primary-btn" id="heroInviteLink" target="_blank" rel="noopener noreferrer">Open Invitation</a>
+      <a class="ghost-btn" href="#classic-details">View Details</a>
+    </div>
+  </header>
+
+  <main class="shell main-stack" id="classic-details">
+    <section class="paper-panel image-panel">
+      <div class="panel-heading centered">
+        <p class="eyebrow">Cover Presentation</p>
+        <h2>A refined classic layout</h2>
+      </div>
+      <figure class="image-frame wide-image">
+        <img data-image="cover" alt="Wedding cover collage">
+      </figure>
+    </section>
+
+    <section class="paper-panel detail-panel">
+      <div class="panel-heading centered narrow">
+        <p class="eyebrow">Invitation details</p>
+        <h2>Designed like timeless stationery</h2>
+        <p>Centered typography, generous white space, and soft framing make this style ideal for couples who prefer a formal presentation.</p>
+      </div>
+      <div class="details-layout">
+        <figure class="image-frame tall-image">
+          <img data-image="invitation" alt="Main invitation page">
+        </figure>
+        <div class="detail-columns">
+          <article class="classic-card">
+            <span class="card-label">Ceremony</span>
+            <h3 data-field="ceremonyName"></h3>
+            <p data-field="ceremonyAddress"></p>
+          </article>
+          <article class="classic-card">
+            <span class="card-label">Reception</span>
+            <h3 data-field="receptionName"></h3>
+            <p data-field="receptionAddress"></p>
+          </article>
+          <article class="classic-card full-span">
+            <span class="card-label">Dress Code</span>
+            <h3 data-field="dressCodeLabel"></h3>
+            <p data-field="dressCodeNote"></p>
+            <div class="swatches" id="dressSwatches"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="paper-panel entourage-panel">
+      <div class="panel-heading centered">
+        <p class="eyebrow">Family & entourage</p>
+        <h2>Classic formal hierarchy</h2>
+      </div>
+      <div class="family-row">
+        <article class="classic-card">
+          <span class="card-label">Groom's Parents</span>
+          <ul id="groomParents"></ul>
+        </article>
+        <article class="classic-card">
+          <span class="card-label">Bride's Parents</span>
+          <ul id="brideParents"></ul>
+        </article>
+      </div>
+      <div class="details-layout alt-layout">
+        <div class="detail-columns sponsors-columns">
+          <article class="classic-card full-span">
+            <span class="card-label">Principal Sponsors</span>
+            <div class="two-column-lists">
+              <ul id="principalSponsorsLeft"></ul>
+              <ul id="principalSponsorsRight"></ul>
+            </div>
+          </article>
+          <article class="classic-card full-span">
+            <span class="card-label">Special Roles</span>
+            <div class="role-grid" id="roleGrid"></div>
+          </article>
+        </div>
+        <figure class="image-frame tall-image">
+          <img data-image="entourage" alt="Entourage page preview">
+        </figure>
+      </div>
+    </section>
+
+    <section class="paper-panel guide-panel">
+      <div class="panel-heading centered">
+        <p class="eyebrow">Day guide</p>
+        <h2>Timeline, gift note, and location guide</h2>
+      </div>
+      <div class="details-layout guide-layout">
+        <div class="detail-columns guide-copy-column">
+          <article class="classic-card full-span">
+            <span class="card-label">Wedding Day Timeline</span>
+            <div class="timeline-list" id="timelineList"></div>
+          </article>
+          <article class="classic-card full-span">
+            <span class="card-label">Gift Guide</span>
+            <blockquote class="message-block" data-field="giftMessage"></blockquote>
+            <a class="primary-btn wide-btn" id="bottomInviteLink" target="_blank" rel="noopener noreferrer">Open Full Invitation</a>
+          </article>
+        </div>
+        <figure class="image-frame tall-image">
+          <img data-image="guide" alt="Guide page preview">
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <script src="invitation-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
