@@ -26,7 +26,7 @@ window.invitationData = {
       address: 'Amomokpok, Ragay, Camarines Sur'
     }
   },
-  invitationLink: 'https://invyt.app/invite/7E9C6C95',
+  invitationLink: 'https://invyt.app/invite/F606E96B',
   dressCode: {
     label: 'Formal / Semi-Formal',
     note: "We'd like to see you in these shades.",
